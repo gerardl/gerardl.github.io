@@ -1,4 +1,8 @@
 
+.italic {
+    font-style: italic;
+}
+
 .project-title {
     font-size: 1.25rem;
     font-weight: bold;
@@ -6,10 +10,6 @@
     margin-top: 5px;
     margin-bottom: 10px;
     border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;
-}
-
-.italic {
-    font-style: italic;
 }
 
 .code-block {
@@ -31,6 +31,21 @@
 
 .code-block .ns {
     color: #bb4600;
+}
+
+.version-1 {
+    color: lightseagreen !important;
+    font-weight: bold;
+}
+
+.version-1dot5 {
+    color: lightcoral !important;
+    font-weight: bold;
+}
+
+.version-2 {
+    color: goldenrod !important;
+    font-weight: bold;
 }
 
 
