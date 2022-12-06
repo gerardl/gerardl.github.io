@@ -1,4 +1,37 @@
 
+.project-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;
+}
+
 .italic {
     font-style: italic;
 }
+
+.code-block {
+    background-color: #ebebeb;
+    border-radius: 6px;
+}
+
+.code-block .kw {
+    color: #cf222e;
+}
+
+.code-block .fn {
+    color: #8250df;
+}
+
+.code-block .cl {
+    color: #0550ae;
+}
+
+.code-block .ns {
+    color: #bb4600;
+}
+
+
+
