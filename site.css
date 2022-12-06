@@ -12,6 +12,15 @@
     border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color)!important;
 }
 
+.info-box {
+    padding: 5px;
+    margin: 5px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: var(--bs-info);
+    border-radius: 3px;
+}
+
 .code-block {
     background-color: #ebebeb;
     border-radius: 6px;
@@ -34,7 +43,7 @@
 }
 
 .version-1 {
-    color: lightseagreen !important;
+    color: steelblue !important;
     font-weight: bold;
 }
 
