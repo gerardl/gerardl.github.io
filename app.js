@@ -12,39 +12,36 @@
   const DETAILS = {
     machine: {
       title: "Machine: where the product is made",
-      body: "Fillers, mixers, presses, detectors and the sensors on them. I work with the people who run the equipment to understand what the machine actually does, what it can measure, and what can go wrong, and I build software that talks to devices directly when there's no PLC in the way.",
+      body: "Fillers, mixers, presses and the sensors on them. I work with the people who run the equipment to understand what the machine does, what it can measure and what can go wrong, and I build software that talks to devices directly when there's no PLC in the way.",
       items: [
-        "Serial and DAQ integrations with instruments and detectors (Meridian metal detection)",
-        "Microcontroller and device-level communication",
+        "Hands-on integration with microcontrollers and plant devices",
         "Requirements gathered on the plant floor, not just in a conference room"
       ]
     },
     plc: {
       title: "PLC: the logic that runs the line",
-      body: "The controller decides when motors run, valves open and batches advance. I read and work alongside ladder logic and tag databases so the software above it stays in step with what the controls engineers built.",
+      body: "The controller decides when motors run, valves open and batches advance. I work alongside the controls engineers so the software above the PLC stays in step with what's running on it.",
       items: [
-        "Rockwell Studio 5000 and FactoryTalk View tag structures",
-        "FactoryTalk Batch recipe phases and procedures (E&J Gallo)",
-        "GE Cimplicity and HMI integrations (Paragon Industries)"
+        "Developing for and integrating with HMIs and PLCs",
+        "Batch recipe management systems for Rockwell FactoryTalk Batch"
       ]
     },
     integration: {
       title: "Integration: getting data off the floor safely",
-      body: "This is the layer most projects live or die on. Moving PLC data into databases and business systems reliably, in both directions, without bringing down production when something upstream hiccups.",
+      body: "This is the layer most projects live or die on. Moving plant data into databases and business systems reliably, in both directions, without disrupting production when something upstream hiccups.",
       items: [
-        "OPC and OPC UA clients, MQTT, SignalR and REST services",
-        "Real-time scheduling fed by plant data (Rob-Ex at E&J Gallo)",
-        "Azure IoT and cloud pipelines, SSIS and SQL Server"
+        "Services and APIs in .NET, .NET Core and Java",
+        "Azure IoT, Azure and AWS pipelines",
+        "SQL Server and document stores"
       ]
     },
     apps: {
       title: "Applications: what the business sees",
-      body: "Dashboards, MES and ERP, recipe editors, traceability, customer APIs and mobile apps. The goal is software that operators actually use and managers actually trust.",
+      body: "Dashboards, recipe editors, production tracking and the web and mobile apps people use every day. The goal is software that operators actually use and managers actually trust.",
       items: [
-        "Full MES and ERP covering scheduling through shipping (Paragon Industries)",
-        "Web-based recipe management for fermentation and blending (E&J Gallo)",
-        "Lot and defect traceability in a regulated industry (Meridian Medical)",
-        "Clinical mobile apps on iOS and Android (Innovative ECMO)"
+        "Full-stack web apps in React, Vue and Angular",
+        "Mobile apps in React Native",
+        "Specs and designs for large projects, carried from start to finish"
       ]
     }
   };

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gerard Lucas · Plant Floor to Cloud</title>
   <meta name="description" content="Gerard Lucas, Senior Engineering Manager in St. Louis. Software that connects machines and PLCs to the systems that run the business.">
-  <link rel="icon" href="/images/favicon.ico">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3E%3Ccircle cx=%278%27 cy=%278%27 r=%276%27 fill=%27%232fd27a%27/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
       <a class="brand" href="#top"><span class="brand-dot" aria-hidden="true"></span>Gerard Lucas</a>
       <nav aria-label="Sections">
         <a href="#line">The line</a>
-        <a href="#work">Work</a>
+        <a href="#work">Industries</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -30,7 +30,7 @@
       <h1>I connect the plant floor<br>to the rest of the business.</h1>
       <p class="lede">
         Since <span data-years>2012</span> I've built the software between machines, PLCs and the people who run them:
-        batch and recipe systems, MES and ERP, traceability, and the integrations that tie them together.
+        batch and recipe systems, plant data integrations, and the business applications built on top of them.
         The line below is a small working model of that job. Start it, break it, and click any layer to see what I build there.
       </p>
     </section>
@@ -160,36 +160,26 @@
 
     <!-- Work -->
     <section id="work" class="wrap section">
-      <h2>Selected work</h2>
-      <p class="section-lede">A few projects I can talk about, and where they sit on the line.</p>
+      <h2>Industries</h2>
+      <p class="section-lede">The same stack shows up everywhere. What changes is the product, the regulations and what downtime costs.</p>
       <div class="cards">
         <article class="card">
           <div class="card-tags"><span class="tag t-plc">PLC</span><span class="tag t-int">Integration</span><span class="tag t-app">Apps</span></div>
-          <h3>E&amp;J Gallo</h3>
-          <p class="card-sub">Recipe management and scheduling for wine production</p>
-          <p>Worked on site in Livingston and Modesto, California for one of the world's largest wine producers. Built a web-based recipe management system for fermentation and blending, and integrated a scheduler that updated orders from real-time plant data.</p>
-          <p class="tech">ASP.NET · AngularJS · SQL Server · FactoryTalk View &amp; Batch · Studio 5000 · Rob-Ex</p>
+          <h3>Manufacturing</h3>
+          <p class="card-sub">From the controller to the front office</p>
+          <p>Software that integrates with HMIs, PLCs and microcontrollers on the line and carries that data into the systems used for planning, production and quality.</p>
+        </article>
+        <article class="card">
+          <div class="card-tags"><span class="tag t-plc">PLC</span><span class="tag t-app">Apps</span></div>
+          <h3>Food &amp; beverage</h3>
+          <p class="card-sub">Batch and recipe management</p>
+          <p>Complex batch recipe management systems built to work with Rockwell FactoryTalk Batch, so recipes are created and changed in the software instead of in the controller.</p>
         </article>
         <article class="card">
           <div class="card-tags"><span class="tag t-int">Integration</span><span class="tag t-app">Apps</span></div>
-          <h3>Paragon Industries</h3>
-          <p class="card-sub">Company-wide MES and ERP for a steel pipe producer</p>
-          <p>Built the system that runs scheduling, production, auditing, sales and shipping of tubular steel for oil line pipe, structural piling and sprinkler pipe, plus an API that gives customers QA data by barcode.</p>
-          <p class="tech">ASP.NET · AngularJS · SQL Server · GE Cimplicity · OPC · SignalR · SSRS · SSIS</p>
-        </article>
-        <article class="card">
-          <div class="card-tags"><span class="tag t-mach">Machine</span><span class="tag t-app">Apps</span></div>
-          <h3>Meridian Medical</h3>
-          <p class="card-sub">Product traceability and metal detection</p>
-          <p>Modernized and rewrote the systems that track exceptions, defects and lot numbers, and helped build a metal detection product that verifies needles are present and seated correctly in syringes.</p>
-          <p class="tech">ASP.NET · Vue · SQL Server · DAQNavi serial</p>
-        </article>
-        <article class="card">
-          <div class="card-tags"><span class="tag t-app">Apps</span></div>
-          <h3>Innovative ECMO</h3>
-          <p class="card-sub">Clinical calculators and cannula selection</p>
-          <p>A free iOS and Android app that helps clinicians pick the right cannula from patient measurements, with a dozen common ECMO formulas from body surface area to sweep gas.</p>
-          <p class="tech">React Native · Swift · Expo · Jest</p>
+          <h3>Pharmaceutical &amp; healthcare</h3>
+          <p class="card-sub">Regulated, long-lived systems</p>
+          <p>Maintaining, diagnosing and modernizing software for clients in complex, regulated industries, where every change has to be traceable and nothing can break.</p>
         </article>
       </div>
     </section>
@@ -232,10 +222,10 @@
 
       <h2 class="toolbox-title">Toolbox</h2>
       <div class="toolbox">
-        <div><h3>Plant floor</h3><p>Rockwell Studio 5000, FactoryTalk View &amp; Batch, GE Cimplicity, OPC / OPC UA, serial and DAQ devices</p></div>
-        <div><h3>Backend &amp; data</h3><p>C#, .NET and .NET Core, Java, SQL Server, EF Core, SSIS, SSRS, document stores</p></div>
-        <div><h3>Frontend &amp; mobile</h3><p>React, Vue, Angular, React Native, Swift, TypeScript</p></div>
-        <div><h3>Cloud</h3><p>Azure, Azure IoT, AWS, Git and CI/CD</p></div>
+        <div><h3>Plant floor</h3><p>Rockwell FactoryTalk Batch, HMIs, PLCs, microcontrollers, OPC / OPC UA</p></div>
+        <div><h3>Backend &amp; data</h3><p>C#, VB.NET, .NET and .NET Core, Java, T-SQL, EF and EF Core, document stores</p></div>
+        <div><h3>Frontend &amp; mobile</h3><p>JavaScript, React, Vue, Angular, React Native</p></div>
+        <div><h3>Cloud</h3><p>Azure, Azure IoT, AWS, Git, TFS</p></div>
       </div>
     </section>
 
