@@ -1,93 +1,250 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <link rel="icon" href="/images/favicon.ico">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Gerard Lucas - Senior Software Developer</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-        <link rel="stylesheet" href="/site.css">
-    </head>
-    <body>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="/index.html">
-                    Gerard Lucas
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/pages/gallo.html">EJ Gallo</a>
-                        </li> 
-                        <li class="nav-item">
-                            <a class="nav-link" href="/pages/paragon.html">Paragon Industries</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/pages/meridian.html">Meridian Medical</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/pages/ecmo.html">Innovative ECMO</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gerard Lucas · Plant Floor to Cloud</title>
+  <meta name="description" content="Gerard Lucas, Senior Engineering Manager in St. Louis. Software that connects machines and PLCs to the systems that run the business.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27%3E%3Ccircle cx=%278%27 cy=%278%27 r=%276%27 fill=%27%232fd27a%27/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top"><span class="brand-dot" aria-hidden="true"></span>Gerard Lucas</a>
+      <nav aria-label="Sections">
+        <a href="#line">The line</a>
+        <a href="#work">Industries</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-        <!-- Main Content -->
-        <div class="container my-4">
-            <div class="row justify-content-lg-center">
-                <div class="col-lg-8 my-4">
-                    <img src="/images/self.jfif" class="img-thumbnail" alt="Gerard">
-                </div>
-                <div class="col-lg-8 project-title">
-                    About Me
-                </div>
-                <div class="col-lg-8 px-0 my-4">
-                    <p>
-                        My name is Gerard Lucas and I'm a senior software developer based in St. Louis, MO.
-                        I lead development of software solutions across many industries including manufacturing,
-                        food & beverage, and pharmaceutical. I work daily as a full-stack developer across multiple technologies
-                        while also gathering requirements, creating technical specifications, and designing complex large-scale projects.
-                    </p>
-                    <p>
-                        Over the last 11 years I've worked in a variety of programming languages and frameworks including
-                        <span class="italic">C#, Java, JavaScript, React, React-Native, Vue, Swift, C++, SQL, EF/EF Core</span>, and many more.
-                        I also have experience designing for and integrating with a variety of HMIs, PLCs, and micro-controllers and
-                        have developed complex batch recipe management systems that work with Rockwell Factory Talk Batch.
-                    </p>
-                    <p>
-                        Follow the links above to see a selection of the projects I've worked on. For additional details
-                        and contact information please visit my LinkedIn or my personal website linked below.
-                    </p>
-                    <div class="my-5">
-                        <a href="https://www.linkedin.com/in/gerard-lucas-981267a0/" class="btn btn-primary" target="_blank">LinkedIn</a>
-                    </div>
-                </div>
-            </div>
-            
+  <main id="top">
+    <section class="hero wrap">
+      <p class="eyebrow">Senior Engineering Manager · Conperio Technology Solutions · St. Louis</p>
+      <h1>I connect the plant floor<br>to the rest of the business.</h1>
+      <p class="lede">
+        Since <span data-years>2012</span> I've built the software between machines, PLCs and the people who run them:
+        batch and recipe systems, plant data integrations, and the business applications built on top of them.
+        The line below is a small working model of that job. Start it, break it, and click any layer to see what I build there.
+      </p>
+    </section>
+
+    <!-- Interactive line -->
+    <section id="line" class="line wrap" aria-label="Interactive demo: machine to PLC to integration to applications">
+      <div class="hmi-bar">
+        <div class="hmi-title"><span class="status-lamp" data-lamp></span><span>LINE 1 · FILLER</span><span class="hmi-state" data-state>STOPPED</span></div>
+        <div class="hmi-controls">
+          <button class="btn btn-go" data-action="start">Start</button>
+          <button class="btn" data-action="stop">Stop</button>
+          <button class="btn btn-warn" data-action="fault">Jam the conveyor</button>
+          <button class="btn" data-action="reset" disabled>Reset fault</button>
+          <label class="speed">Speed <input type="range" min="1" max="3" step="1" value="2" data-speed aria-label="Line speed"></label>
         </div>
+      </div>
+      <div class="alarm-banner" data-alarm hidden role="status">
+        <strong>ALARM</strong> <span data-alarm-text></span>
+      </div>
 
-        <!-- Footer -->
-        <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-2 my-2 border-top">
-              <div class="col-md-4 d-flex align-items-center">
-                <span class="mb-3 mb-md-0 text-muted">&copy; 2022 Gerard Lucas</span>
+      <div class="stages">
+        <!-- 1. Machine -->
+        <article class="stage" data-stage="machine">
+          <button class="stage-head" data-open="machine" aria-expanded="false">
+            <span class="stage-num">01</span><span class="stage-name">Machine</span><span class="stage-more">What I do here</span>
+          </button>
+          <div class="stage-body">
+            <svg class="machine" viewBox="0 0 300 170" role="img" aria-label="Animated bottle filler on a conveyor">
+              <rect x="118" y="8" width="64" height="44" rx="4" class="m-tank"/>
+              <rect x="120" y="10" width="60" height="40" rx="3" class="m-tank-inner"/>
+              <rect x="121" y="49" width="58" height="0" class="m-liquid" data-tank-fill/>
+              <rect x="146" y="52" width="8" height="26" class="m-nozzle"/>
+              <rect x="148" y="78" width="4" height="0" class="m-stream" data-stream/>
+              <line x1="230" y1="96" x2="230" y2="132" class="m-eye-beam" data-eye-beam/>
+              <rect x="224" y="82" width="12" height="12" rx="2" class="m-eye" data-eye/>
+              <g data-bottles></g>
+              <rect x="10" y="132" width="280" height="10" rx="5" class="m-belt"/>
+              <g class="m-rollers" data-rollers>
+                <circle cx="20" cy="137" r="4"/><circle cx="60" cy="137" r="4"/><circle cx="100" cy="137" r="4"/>
+                <circle cx="140" cy="137" r="4"/><circle cx="180" cy="137" r="4"/><circle cx="220" cy="137" r="4"/>
+                <circle cx="260" cy="137" r="4"/><circle cx="280" cy="137" r="4"/>
+              </g>
+              <rect x="10" y="146" width="10" height="20" class="m-leg"/><rect x="280" y="146" width="10" height="20" class="m-leg"/>
+              <g data-jam style="display:none"><rect x="186" y="104" width="24" height="26" rx="3" class="m-jam"/><text x="198" y="122" class="m-jam-x">!</text></g>
+            </svg>
+            <dl class="readouts">
+              <div><dt>Motor</dt><dd data-r="motor">OFF</dd></div>
+              <div><dt>Photo-eye</dt><dd data-r="eye">CLEAR</dd></div>
+              <div><dt>Tank</dt><dd data-r="tank">--</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <div class="wire" data-wire="0" aria-hidden="true"><span class="wire-label">I/O</span></div>
+
+        <!-- 2. PLC -->
+        <article class="stage" data-stage="plc">
+          <button class="stage-head" data-open="plc" aria-expanded="false">
+            <span class="stage-num">02</span><span class="stage-name">PLC</span><span class="stage-more">What I do here</span>
+          </button>
+          <div class="stage-body">
+            <div class="ladder" aria-label="Ladder logic rung for the conveyor motor">
+              <div class="rung" data-rung>
+                <span class="rail"></span>
+                <span class="contact" data-c="run">Run</span>
+                <span class="seg"></span>
+                <span class="contact nc" data-c="fault">Fault</span>
+                <span class="seg"></span>
+                <span class="coil" data-c="motor">Motor</span>
+                <span class="rail"></span>
               </div>
-          
-              <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a class="text-muted" href="https://github.com/gerardl/gerardl.github.io" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a></li>
-              </ul>
-            </footer>
-        </div>
+            </div>
+            <table class="tags">
+              <thead><tr><th>Tag</th><th>Type</th><th>Value</th></tr></thead>
+              <tbody>
+                <tr><td>Line1.Run</td><td>BOOL</td><td data-t="run">0</td></tr>
+                <tr><td>Line1.Fault</td><td>BOOL</td><td data-t="fault">0</td></tr>
+                <tr><td>Filler.Count</td><td>DINT</td><td data-t="count">0</td></tr>
+                <tr><td>Tank.Level</td><td>REAL</td><td data-t="level">0.0</td></tr>
+                <tr><td>Task.ScanMs</td><td>REAL</td><td data-t="scan">0.0</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-        <script src="/site.js"></script>
-    </body>
+        <div class="wire" data-wire="1" aria-hidden="true"><span class="wire-label">OPC UA</span></div>
+
+        <!-- 3. Integration -->
+        <article class="stage" data-stage="integration">
+          <button class="stage-head" data-open="integration" aria-expanded="false">
+            <span class="stage-num">03</span><span class="stage-name">Integration</span><span class="stage-more">What I do here</span>
+          </button>
+          <div class="stage-body">
+            <div class="chips"><span class="chip">OPC UA</span><span class="chip">MQTT</span><span class="chip">REST</span><span class="chip">SQL</span></div>
+            <ol class="log" data-log aria-live="off"></ol>
+          </div>
+        </article>
+
+        <div class="wire" data-wire="2" aria-hidden="true"><span class="wire-label">API</span></div>
+
+        <!-- 4. Applications -->
+        <article class="stage" data-stage="apps">
+          <button class="stage-head" data-open="apps" aria-expanded="false">
+            <span class="stage-num">04</span><span class="stage-name">Applications</span><span class="stage-more">What I do here</span>
+          </button>
+          <div class="stage-body">
+            <div class="kpis">
+              <div class="kpi"><span class="kpi-label">Units today</span><span class="kpi-value" data-k="units">0</span></div>
+              <div class="kpi"><span class="kpi-label">Rate / min</span><span class="kpi-value" data-k="rate">0</span></div>
+              <div class="kpi"><span class="kpi-label">Availability</span><span class="kpi-value" data-k="avail">100%</span></div>
+            </div>
+            <canvas class="trend" data-trend height="70" aria-label="Rate trend"></canvas>
+            <div class="order">
+              <div class="order-row"><span>Work order <b data-k="wo">WO-2291</b></span><span data-k="wopct">0%</span></div>
+              <div class="bar"><span data-k="wobar"></span></div>
+              <div class="order-row muted"><span>ERP sync</span><span data-k="erp">idle</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="detail" data-detail hidden>
+        <button class="detail-close" data-close aria-label="Close">×</button>
+        <div data-detail-body></div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="wrap section">
+      <h2>Industries</h2>
+      <p class="section-lede">The same stack shows up everywhere. What changes is the product, the regulations and what downtime costs.</p>
+      <div class="cards">
+        <article class="card">
+          <div class="card-tags"><span class="tag t-plc">PLC</span><span class="tag t-int">Integration</span><span class="tag t-app">Apps</span></div>
+          <h3>Manufacturing</h3>
+          <p class="card-sub">From the controller to the front office</p>
+          <p>Software that integrates with HMIs, PLCs and microcontrollers on the line and carries that data into the systems used for planning, production and quality.</p>
+        </article>
+        <article class="card">
+          <div class="card-tags"><span class="tag t-plc">PLC</span><span class="tag t-app">Apps</span></div>
+          <h3>Food &amp; beverage</h3>
+          <p class="card-sub">Batch and recipe management</p>
+          <p>Complex batch recipe management systems built to work with Rockwell FactoryTalk Batch, so recipes are created and changed in the software instead of in the controller.</p>
+        </article>
+        <article class="card">
+          <div class="card-tags"><span class="tag t-int">Integration</span><span class="tag t-app">Apps</span></div>
+          <h3>Pharmaceutical &amp; healthcare</h3>
+          <p class="card-sub">Regulated, long-lived systems</p>
+          <p>Maintaining, diagnosing and modernizing software for clients in complex, regulated industries, where every change has to be traceable and nothing can break.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="wrap section">
+      <h2>Experience</h2>
+      <ol class="timeline">
+        <li>
+          <span class="when">2025 to now</span>
+          <div><h3>Senior Engineering Manager</h3><p class="org">Conperio Technology Solutions</p>
+          <p>Leading the engineering team that builds custom software for manufacturing, food and beverage, and pharmaceutical clients.</p></div>
+        </li>
+        <li>
+          <span class="when">2020 to 2025</span>
+          <div><h3>Senior Software Engineer, Technical Lead</h3><p class="org">Conperio Technology Solutions</p>
+          <p>Led development across industries, from requirements and technical specs through design and delivery of large projects, while staying hands-on as a full-stack developer.</p></div>
+        </li>
+        <li>
+          <span class="when">2016 to 2020</span>
+          <div><h3>Senior Software Developer</h3><p class="org">Conperio Technology Solutions</p>
+          <p>Integrated with HMIs, PLCs and microcontrollers, built batch recipe systems for Rockwell FactoryTalk Batch, and kept legacy systems healthy in regulated industries.</p></div>
+        </li>
+        <li>
+          <span class="when">2014 to 2016</span>
+          <div><h3>Software Developer</h3><p class="org">Conperio Technology Solutions</p>
+          <p>Built and maintained software for manufacturing and healthcare clients on .NET MVC, Web API and SQL Server.</p></div>
+        </li>
+        <li>
+          <span class="when">2012 to 2014</span>
+          <div><h3>Software Developer</h3><p class="org">AppointLink</p>
+          <p>SharePoint learning management, an interactive classroom seating app, SOAP and REST services, and the servers they ran on.</p></div>
+        </li>
+        <li>
+          <span class="when">2012</span>
+          <div><h3>Junior Software Developer</h3><p class="org">DRS</p></div>
+        </li>
+      </ol>
+      <p class="edu">B.S. Information Technology, University of Missouri, summa cum laude</p>
+
+      <h2 class="toolbox-title">Toolbox</h2>
+      <div class="toolbox">
+        <div><h3>Plant floor</h3><p>Rockwell FactoryTalk Batch, HMIs, PLCs, microcontrollers, OPC / OPC UA</p></div>
+        <div><h3>Backend &amp; data</h3><p>C#, VB.NET, .NET and .NET Core, Java, T-SQL, EF and EF Core, document stores</p></div>
+        <div><h3>Frontend &amp; mobile</h3><p>JavaScript, React, Vue, Angular, React Native</p></div>
+        <div><h3>Cloud</h3><p>Azure, Azure IoT, AWS, Git, TFS</p></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="wrap section contact-section">
+      <h2>Let's talk</h2>
+      <p>If you have a line, a plant or a process that needs software around it, I'm happy to hear about it.</p>
+      <div class="contact-links">
+        <a class="btn btn-go" href="https://www.linkedin.com/in/gerard-lucas/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/gerardl" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <span>© <span data-year>2026</span> Gerard Lucas</span>
+    <a href="https://github.com/gerardl/gerardl.github.io" target="_blank" rel="noopener">Source</a>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
 </html>
